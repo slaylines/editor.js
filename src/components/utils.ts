@@ -2,7 +2,7 @@
  * Class Util
  */
 
-import { nanoid, customAlphabet } from 'nanoid';
+import { customAlphabet } from 'nanoid';
 import Dom from './dom';
 
 /**
