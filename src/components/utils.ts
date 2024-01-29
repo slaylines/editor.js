@@ -2,7 +2,7 @@
  * Class Util
  */
 
-import { nanoid } from 'nanoid';
+import { nanoid, customAlphabet } from 'nanoid';
 import Dom from './dom';
 
 /**
@@ -660,9 +660,10 @@ export function getValidUrl(url: string): string {
  * @returns {string}
  */
 export function generateBlockId(): string {
-  const idLen = 10;
+  const alphabet = '0123456789abcdefghijklmnopqrstuvwxyz';
+  const nanoid = customAlphabet(alphabet, 20);
 
-  return nanoid(idLen);
+  return nanoid();
 }
 
 /**
